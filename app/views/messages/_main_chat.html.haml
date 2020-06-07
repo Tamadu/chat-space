@@ -1,0 +1,24 @@
+.main_chat 
+  .main_header
+    .main_header__group
+      .main_header__groupName
+        %ul.main_header__memberList
+          %li.main_header__members Member:
+    = link_to "#", class:"main_header_editButton" do
+      Edit
+  .message_list
+    .message_box
+      .message_info
+        .message_info__username masa
+        .message_info__date 2020年06月07日13時00分
+      .message
+        %p.message__content goodbye!
+  .message_form
+    %form.new_message
+      .input_box
+        %input{type: "text", class: "input_box__text", placeholder:"type a message"}
+        %label{class: "input_box__image"}
+          = icon('far', 'image')
+          %input{type: "file", class:"input_box__image__file"}
+      %input{type: "submit", class: "submit-btn", value:"Send"}
+    
