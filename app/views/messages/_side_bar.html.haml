@@ -9,6 +9,7 @@
         = link_to "#", class:"side_header__icon" do
           = icon('fas', 'cog')
   .group_list
-    = link_to "#", class:"group" do
-      %p.group__name
-      %p.group__message
+    .group
+      = link_to "#", class:"group" do
+        .group__name B
+        .group__message goodbye!
