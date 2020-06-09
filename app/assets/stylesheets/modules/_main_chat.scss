@@ -8,80 +8,69 @@
     border-bottom: 1px solid #eeeeee;
     display: flex;
     justify-content: space-between;
+    &__groupName {
+      color: #333333;
+      font-size: 20px;
+      margin-top: 35px;
+    }
+    &__memberList {
+      color: #999999;
+      display: flex;
+      font-size: 12px;
+      margin-top: 15px;
+    }
+    &__members {
+      padding-right: 5px;
+      }
+    &__editButton {
+      display: block;
+      border: 1px solid #38aef0;
+      height: 40px;
+      line-height: 40px;
+      margin-top: 28px;
+      padding: 0px 20px;
+      text-decoration: none;
+      color: #38aef0;
+    }
   }
 }
-
-.main_header__groupName {
-  color: #333333;
-  font-size: 20px;
-  margin-top: 35px;
-}
-.main_header__memberList {
-    color: #999999;
-    display: flex;
-    font-size: 12px;
-    margin-top: 15px;
-}
-.main_header__members {
-    padding-right: 5px; 
-}
-
-
-
-.main_header_editButton {
-  display: block;
-  border: 1px solid #38aef0;
-  height: 40px;
-  line-height: 40px;
-  margin-top: 28px;
-  padding: 0px 20px;
-  text-decoration: none;
-  color: #38aef0;
-}
-
-.message_list {
-  background-color: #fafafa;
-  height: calc( 100vh - 190px );
-  padding: 35px 40px 0;
-  box-sizing: border-box;
-  overflow: scroll;
-}
-
-.message_box {
-  margin-bottom: 46px;
-}
-
-.message_info {
-  display: flex;
-  &__username {
-    color: #434a54;
-    font-size: 16px;
-    font-weight: bold;
+  .message_list {
+    background-color: #fafafa;
+    height: calc( 100vh - 190px );
+    padding: 35px 40px 0;
+    box-sizing: border-box;
+    overflow: scroll;
+    .message_box {
+      margin-bottom: 46px;
+      .message_info {
+        display: flex;
+        &__username {
+          color: #434a54;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: #999999;
+          font-size: 12px;
+          padding-left: 10px;
+        }
+      }
+      .message {
+        margin-top: 12px;
+        &__content {
+          color: #434a54;
+          font-size: 14px;
+          }
+      }
+    }
   }
-}
-
-.message_info__date {
-  color: #999999;
-  font-size: 12px;
-  padding-left: 10px;
-}
-
-.message {
-  margin-top: 12px;
-  &__content {
-    color: #434a54;
-    font-size: 14px;
-  }
-}
-
-.message_form {
-  background-color: #dddddd;
-  height: 90px;
-  box-sizing: border-box;
-  padding: 20px 50px 20px 40px;
-}
-  form {
-    display: flex;
+  .message_form {
+    background-color: #dddddd;
+    height: 90px;
+    box-sizing: border-box;
+    padding: 20px 50px 20px 40px;
+    form {
+      display: flex;
       .input_box {
         width: 100%;
         position: relative;
@@ -114,4 +103,5 @@
         margin-left: 15px;
         padding: 0 30px;
       }
+    }
   }
