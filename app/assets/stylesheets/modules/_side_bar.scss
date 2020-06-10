@@ -37,14 +37,16 @@
       padding: 20px 0 40px;
       &__name {
         font-size: 15px;
+        color: #ffffff;
+        text-decoration: none;
       }
       &__message {
         margin-top: 5px;
         font-size: 11px;
-        a {
-          color: #ffffff;
-          text-decoration: none;
-        }
+        color: #ffffff;
+      }
+      a {
+        text-decoration: none;
       }
     }
   }
