@@ -2,23 +2,21 @@
   .main_header
     .main_header__group
       .main_header__groupName
+        = @group.name
         %ul.main_header__memberList
-          %li.main_header__members Member:
-    = link_to "#", class:"main_header__editButton" do
+          %li.main_header__members
+            Member:
+            - @group.users.each do |user|
+              = user.name
+    = link_to edit_group_path(params[:group_id]), class:"main_header__editButton" do
       Edit
   .message_list
-    .message_box
-      .message_info
-        .message_info__username masa
-        .message_info__date 2020年06月07日13時00分
-      .message
-        %p.message__content goodbye!
+    = render @messages
   .message_form
-    %form.new_message
+    = form_with model: [@group, @message], html: {class: "new_message"}, local: true do |f|
       .input_box
-        %input{type: "text", class: "input_box__text", placeholder:"type a message"}
-        %label{class: "input_box__image"}
+        = f.text_field :content, class: 'input_box__text',placeholder: 'type a message'
+        = f.label :image, class: 'input_box__image' do
           = icon('far', 'image')
-          %input{type: "file", class:"input_box__image__file"}
-      %input{type: "submit", class: "submit-btn", value:"Send"}
-    
+          =f.file_field :image, class: 'input_box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
