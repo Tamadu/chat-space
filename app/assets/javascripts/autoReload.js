@@ -43,6 +43,7 @@ $(function(){
   }
 
   let reloadMessages = function() {
+    console.log("1")
     let last_message_id = $('.message_box:last').data("message-id");
     $.ajax({
       url: "api/messages",
@@ -51,6 +52,7 @@ $(function(){
       data: {id: last_message_id}
     })
     .done(function(messages) {
+      console.log(messages)
       if (messages.length !== 0) {
         let insertHTML = '';
         $.each(messages, function(i, message) {
